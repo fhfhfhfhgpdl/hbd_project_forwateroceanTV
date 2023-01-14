@@ -165,7 +165,7 @@ class _PinState extends State<Pin> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30.0),
                 child: Text(
-                  hasError ? "*Please fill up all the cells properly" : "",
+                  hasError ? "*모든 칸을 채워주세요" : "",
                   style: const TextStyle(
                       color: Colors.teal,
                       fontSize: 12,
@@ -215,7 +215,7 @@ class _PinState extends State<Pin> {
                               () {
                             hasError = false;
                             snackBar("정답!!");
-                            Get.toNamed('/');
+                            Get.toNamed('/Choose');
                           },
                         );
                       }
