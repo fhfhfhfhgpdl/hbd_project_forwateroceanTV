@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hbd_hs/choose.dart';
+import 'package:hbd_hs/letter/norm.dart';
 import 'package:hbd_hs/letter/special.dart';
 import 'package:hbd_hs/pin.dart';
 
@@ -12,12 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: '/Choose',
+      initialRoute: '/Norm',
       getPages: [
         GetPage(name: '/', page: ()=>const Start()),
         GetPage(name: '/PIN', page: ()=>const Pin()),
         GetPage(name: '/Choose', page: ()=>const Choose()),
-        GetPage(name: '/Spec', page: ()=>const Special())
+        GetPage(name: '/Spec', page: ()=>const Special()),
+        GetPage(name: '/Norm', page: ()=>const Norm())
       ],
     );
   }

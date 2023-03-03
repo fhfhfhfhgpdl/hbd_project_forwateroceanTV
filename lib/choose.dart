@@ -14,7 +14,7 @@ class Choose extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ElevatedButton(onPressed: (){},
-                  child: Text('재미는있는 보통 편지와 선물',
+                  child: Text('편지',
                   style: TextStyle(fontFamily: 'PCP', fontSize: 25),textAlign: TextAlign.center,),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.cyan,
@@ -22,7 +22,7 @@ class Choose extends StatelessWidget {
               ),),
               SizedBox(height: MediaQuery.of(context).size.height*0.1,),
               ElevatedButton(onPressed: (){Get.toNamed('/Spec');},
-                  child: Text('정성스럽고 진심이 담긴 편지',textAlign: TextAlign.center,
+                  child: Text('선물',textAlign: TextAlign.center,
                   style: TextStyle(fontFamily: 'PCP', fontSize: 25, fontWeight: FontWeight.w700),),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.cyan,
