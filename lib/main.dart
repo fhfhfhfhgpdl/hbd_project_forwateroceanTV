@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hbd_hs/choose.dart';
+import 'package:hbd_hs/letter/letter2.dart';
 import 'package:hbd_hs/letter/norm.dart';
 import 'package:hbd_hs/letter/special.dart';
 import 'package:hbd_hs/pin.dart';
+
+import 'letter/Real.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,13 +16,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: '/Norm',
+      initialRoute: '/Spec',
       getPages: [
         GetPage(name: '/', page: ()=>const Start()),
         GetPage(name: '/PIN', page: ()=>const Pin()),
         GetPage(name: '/Choose', page: ()=>const Choose()),
         GetPage(name: '/Spec', page: ()=>const Special()),
-        GetPage(name: '/Norm', page: ()=>const Norm())
+        GetPage(name: '/Norm', page: ()=>const Norm()),
+        GetPage(name: '/Letter2', page: ()=>const LetterT()),
+        GetPage(name: '/Real', page: ()=>const real()),
       ],
     );
   }
@@ -42,6 +47,12 @@ class start extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){Get.toNamed('/Choose'
+        );},
+        backgroundColor: Colors.cyan,
+        child: const Icon(Icons.navigate_before),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
