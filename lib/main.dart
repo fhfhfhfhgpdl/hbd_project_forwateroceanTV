@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:hbd_hs/choose.dart';
 import 'package:hbd_hs/letter/letter2.dart';
 import 'package:hbd_hs/letter/norm.dart';
+import 'package:hbd_hs/letter/present.dart';
 import 'package:hbd_hs/letter/special.dart';
 import 'package:hbd_hs/pin.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: '/Spec',
+      initialRoute: '/',
       getPages: [
         GetPage(name: '/', page: ()=>const Start()),
         GetPage(name: '/PIN', page: ()=>const Pin()),
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/Norm', page: ()=>const Norm()),
         GetPage(name: '/Letter2', page: ()=>const LetterT()),
         GetPage(name: '/Real', page: ()=>const real()),
+        GetPage(name: '/Pre', page: ()=>const pre())
       ],
     );
   }
