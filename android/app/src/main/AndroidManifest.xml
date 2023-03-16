@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hbd_hs">
+    package="com.happybirth.hs">
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
@@ -7,7 +7,7 @@
         </intent>
     </queries>
    <application
-        android:label="HappyBirthDay_WaterOceanTV"
+        android:label="생일축하한다"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

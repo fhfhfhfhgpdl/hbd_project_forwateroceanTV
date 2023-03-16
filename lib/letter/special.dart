@@ -1,6 +1,6 @@
-import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Special extends StatefulWidget {
   const Special({Key? key}) : super(key: key);
@@ -38,6 +38,12 @@ class _SpecialState extends State<Special> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){Get.toNamed('/Choose'
+          );},
+          backgroundColor: Colors.cyan,
+          child: const Icon(Icons.navigate_before),
+        ),
         body: Center(
           child: Column(
             children: [
@@ -45,7 +51,7 @@ class _SpecialState extends State<Special> {
                 child: ListView.builder(
                   itemCount: 10,
                   itemBuilder: (BuildContext context, int index) {
-                    return Image.asset('${imgs[index]}');
+                    return Image.asset(imgs[index]);
                   },
                 ),
               ),

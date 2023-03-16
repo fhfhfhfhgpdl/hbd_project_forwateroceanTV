@@ -70,9 +70,9 @@ class _PinState extends State<Pin> {
                   textAlign: TextAlign.center,
                 ),
               ),
-              Padding(
+              const Padding(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 30.0, vertical: 8),
+                EdgeInsets.symmetric(horizontal: 30.0, vertical: 8),
                 // child: RichText(
                 //   text: TextSpan(
                 //       text: "Enter the code sent to ",
@@ -99,7 +99,7 @@ class _PinState extends State<Pin> {
                         vertical: 8.0, horizontal: 100),
                     child: PinCodeTextField(
                       appContext: context,
-                      pastedTextStyle: TextStyle(
+                      pastedTextStyle: const TextStyle(
                         color: Colors.teal,
                         fontWeight: FontWeight.bold,
                       ),
@@ -198,10 +198,25 @@ class _PinState extends State<Pin> {
                 height: 14,
               ),
               Container(
+                width: MediaQuery.of(context).size.width*0.5,
                 margin:
                 const EdgeInsets.symmetric(vertical: 16.0, horizontal: 200),
+                decoration: BoxDecoration(
+                    color: Colors.teal.shade300,
+                    borderRadius: BorderRadius.circular(5),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.teal.shade200,
+                          offset: const Offset(1, -2),
+                          blurRadius: 5),
+                      BoxShadow(
+                          color: Colors.teal.shade200,
+                          offset: const Offset(-1, 2),
+                          blurRadius: 5)
+                    ]),
                 child: ButtonTheme(
                   height: 80,
+                  minWidth: MediaQuery.sizeOf(context).width*0.5,
                   child: TextButton(
                     onPressed: () {
                       formKey.currentState!.validate();
@@ -223,26 +238,13 @@ class _PinState extends State<Pin> {
                     child: Center(
                         child: Text(
                           "NEXT".toUpperCase(),
-                          style: const TextStyle(
+                          style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
                               fontFamily: 'PCP'),
                         )),
                   ),
                 ),
-                decoration: BoxDecoration(
-                    color: Colors.teal.shade300,
-                    borderRadius: BorderRadius.circular(5),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.teal.shade200,
-                          offset: const Offset(1, -2),
-                          blurRadius: 5),
-                      BoxShadow(
-                          color: Colors.teal.shade200,
-                          offset: const Offset(-1, 2),
-                          blurRadius: 5)
-                    ]),
               ),
               const SizedBox(
                 height: 16,

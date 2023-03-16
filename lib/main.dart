@@ -9,7 +9,7 @@ import 'package:hbd_hs/pin.dart';
 
 import 'letter/Real.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -40,27 +40,24 @@ class Start extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(fontFamily: 'PC'),
-      home: start()
+      home: const start()
     );
   }
 }
 
 class start extends StatelessWidget{
+  const start({super.key});
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){Get.toNamed('/Choose'
-        );},
-        backgroundColor: Colors.cyan,
-        child: const Icon(Icons.navigate_before),
-      ),
+
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('생일 축하해,\n물바다TV!',
+            const Text('생일 축하해,\n물바다TV!',
               style: TextStyle(fontFamily: 'PC', color: Colors.teal,
                   fontSize: 40, fontWeight: FontWeight.w900),
               textAlign: TextAlign.center,),
@@ -74,14 +71,14 @@ class start extends StatelessWidget{
             ),
             SizedBox(height: MediaQuery.of(context).size.height*0.1,),
             TextButton(onPressed: (){Get.toNamed('/PIN');},
-                child: Text('Go to Next',
-                  style: TextStyle(fontFamily: 'PCP', fontWeight: FontWeight.w600,color: Colors.teal),),
               style: TextButton.styleFrom(
                 backgroundColor: Colors.white,
-                padding: EdgeInsets.all(13.0),
-                shape: StadiumBorder(),
+                padding: const EdgeInsets.all(13.0),
+                shape: const StadiumBorder(),
                 alignment: Alignment.center,
               ),
+                child: const Text('Go to Next',
+                  style: TextStyle(fontFamily: 'PCP', fontWeight: FontWeight.w600,color: Colors.teal),),
             ),
           ],
         ),
