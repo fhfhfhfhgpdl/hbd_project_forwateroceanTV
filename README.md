@@ -1,16 +1,8 @@
 # hbd_hs
 
-A new Flutter project.
+### google play store link:  
+https://play.google.com/store/apps/details?id=com.happybirth.hs
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### develop note:  
+https://velog.io/@fhfhfhfhgpdl/%EC%83%9D%EC%9D%BC%EC%B6%95%ED%95%98-%ED%8E%B8%EC%A7%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8
